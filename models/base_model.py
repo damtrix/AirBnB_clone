@@ -16,16 +16,11 @@ class BaseModel:
         Initialising instance
         """
         if kwargs is not None and len(kwargs) != 0:
-            for key in kwargs:
-                if key == "created_at":
-                    kwargs["created_at"] = datetime.fromisoformat(
-                        kwargs["created_at"])
-                elif key == "updated_at":
-                    kwargs["updated_at"] = datetime.fromisoformat(
-                        kwargs["updated_at"])
-                else:
-                    self.__dict__[key] = kwargs[key]
-
+            if '__class__' in kwargs:
+                del kwargs['__class__']
+            kwargs['created_at'] = datetime.fromisoformat(kwargs['created_at'])
+            kwargs['updated_at'] = datetime.fromisoformat(kwargs['updated_at'])
+            self.__dict__.update(kwargs)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()

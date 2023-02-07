@@ -33,7 +33,7 @@ class FileStorage:
             return
 
         with open(FileStorage.__file_path, "r", encoding="utf-8") as myFile:
-            data = json.load(myFile)
+            data = json.loads(myFile.read())
             from models.base_model import BaseModel
             for key, value in data.items():
                 if value['__class__'] == "BaseModel":
