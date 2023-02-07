@@ -267,9 +267,11 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
     <ul>
     <li><a href="https://www.github.com/DELMUS1M">Github</a></li>
     <li><a href="mailto:ogoradelmus1@gmail.com">e-mail</a></li>
+    
+## Authors
 
 <details>
-    <summary>ONARINDE OLUDAMOLA</summary>
+    <summary>Onarinde Oludamola</summary>
     <ul>
     <li><a href="https://www.github.com/damtrix">Github</a></li>
     <li><a href="mailto:onarinde.oludamola@gmail.com">e-mail</a></li>
