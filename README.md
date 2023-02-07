@@ -262,15 +262,13 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 
 ## Authors
 
-<details>
+<detail>
     <summary>OGORA DELMUS</summary>
     <ul>
     <li><a href="https://www.github.com/DELMUS1M">Github</a></li>
     <li><a href="mailto:ogoradelmus1@gmail.com">e-mail</a></li>
-    
-## Authors
 
-<details>
+<detail>
     <summary>Onarinde Oludamola</summary>
     <ul>
     <li><a href="https://www.github.com/damtrix">Github</a></li>
