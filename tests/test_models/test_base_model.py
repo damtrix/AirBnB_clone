@@ -42,6 +42,8 @@ class TestBaseModel(unittest.TestCase):
          'id': base.id,
          'created_at': base.created_at.isoformat()
          })
+        base.save()
+        self.assertNotEqual(prev_time, base.updated_at)
          
 
     def test_class_attributes(self):
@@ -54,4 +56,15 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(base.updated_at, datetime)
         self.assertNotEqual(base.id, base2.id)
 
+    def test_no_args(self):
+        """Test if args were supplied (__init__)"""
+        
+        base = BaseModel()
+        with self.assertRaises(TypeError) as e:
+            BaseModel.__init__()
+        msg = "BaseModel.__init__() missing 1 required positional argument: 'self'"
+        self.assertEqual(str(e.exception), msg)
+
     
+if __name__ == '__main__':
+    unittest.main()
