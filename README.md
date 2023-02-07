@@ -1,5 +1,7 @@
 # 0x00. AirBnB clone - The console
 
+![AirBnB Logo](https://www.pngitem.com/pimgs/m/132-1322125_transparent-background-airbnb-logo-hd-png-download.png)
+
 ## 0x00.Table of contents
 
 - [0x01 Introduction](#0x01-Introduction)
@@ -262,14 +264,6 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 
 ## Authors
 
-<detail>
-    <summary>OGORA DELMUS</summary>
-    <ul>
-    <li><a href="https://www.github.com/DELMUS1M">Github</a></li>
-    <li><a href="mailto:ogoradelmus1@gmail.com">e-mail</a></li>
+Ogora Delmus | Email: [DELMUS1M](mailto:ogoradelmus1@gmail.com)
 
-<detail>
-    <summary>Onarinde Oludamola</summary>
-    <ul>
-    <li><a href="https://www.github.com/damtrix">Github</a></li>
-    <li><a href="mailto:onarinde.oludamola@gmail.com">e-mail</a></li>
+Onarinde Oludamola | Github: [damtrix](mailto:onarinde.oludamola@gmail.com@gmail.com)
