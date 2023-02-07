@@ -1,6 +1,5 @@
 file.json
-3main.py
+/3main.py
 4main.py
 5main.py
-models\__pycache__
-tests\__pycache__
+__pycache__
