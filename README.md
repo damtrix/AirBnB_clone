@@ -264,6 +264,6 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 
 ## Authors
 
-Ogora Delmus | Email: [DELMUS1M](mailto:ogoradelmus1@gmail.com)
+Ogora Delmus | Email: [ogoradelmus1@gmail.com](mailto:ogoradelmus1@gmail.com) | Github: [DELMUS1M](https://github.com/DELMUS1M)
 
-Onarinde Oludamola | Github: [damtrix](mailto:onarinde.oludamola@gmail.com@gmail.com)
+Onarinde Oludamola | Email: [onarinde.oludamola@gmail.com](mailto:onarinde.oludamola@gmail.com)| Github: [damtrix](https://github.com/damtrix)
