@@ -9,6 +9,18 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
 
+    def classes(self):
+        """Returns the dictionary of a valid class"""
+        from models.base_model import BaseModel
+        from models.user import User
+
+        classes = {
+            "BaseModel": BaseModel,
+            "User": User
+        }
+
+        return classes
+
     def all(self):
         """Returns the dictionary __objects"""
         return FileStorage.__objects
@@ -33,8 +45,7 @@ class FileStorage:
             return
 
         with open(FileStorage.__file_path, "r", encoding="utf-8") as myFile:
-            data = json.loads(myFile.read())
-            from models.base_model import BaseModel
-            for key, value in data.items():
-                if value['__class__'] == "BaseModel":
-                    FileStorage.__objects[key] = BaseModel(**value)
+            data = json.load(myFile)
+            data = {k: self.classes()[v["__class__"]](**v)
+                        for k, v in data.items()}
+            FileStorage.__objects = data
