@@ -4,6 +4,7 @@ import json
 import datetime
 import os
 
+
 class FileStorage:
     """Serializing and deserializing of instance to JSON file and vis-a-vis"""
     __file_path = "file.json"
@@ -43,13 +44,16 @@ class FileStorage:
     def save(self):
         """Serializes __objects to the JSON file (path: __file_path)"""
         with open(FileStorage.__file_path, "w", encoding="utf-8") as myFile:
-            data = {key: value.to_dict() for key, value in FileStorage.__objects.items()}
+            data = {key: value.to_dict()
+                    for key, value in FileStorage.__objects.items()}
             json.dump(data, myFile)
 
     def reload(self):
         """
-        Deserializes the JSON file to __objects (only if the JSON file (__file_path) exists;
-        otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
+        Deserializes the JSON file to __objects
+        (only if the JSON file (__file_path) exists;
+        otherwise, do nothing. If the file doesn’t
+        exist, no exception should be raised)
         """
         if not os.path.isfile(FileStorage.__file_path):
             return
@@ -57,7 +61,7 @@ class FileStorage:
         with open(FileStorage.__file_path, "r", encoding="utf-8") as myFile:
             data = json.load(myFile)
             data = {k: self.classes()[v["__class__"]](**v)
-                        for k, v in data.items()}
+                    for k, v in data.items()}
             FileStorage.__objects = data
 
     def attributes(self):

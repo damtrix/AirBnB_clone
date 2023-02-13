@@ -64,7 +64,8 @@ class HBNBCommand(cmd.Cmd):
         elif lineParse[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
-            print(eval(lineParse[0])().id)
+            data = storage.classes()[lineParse[0]]()
+            print(data.id)
             storage.save()
 
     def do_show(self, line):
@@ -175,16 +176,21 @@ class HBNBCommand(cmd.Cmd):
         """Usage: count <class> or <class>.count()
         Retrieve the number of instances of a given class."""
 
-        linParse = parse(line)
+        lineParse = parse(line)
         count = 0
-        for obj in storage.all().values():
-            if linParse[0] == obj.__class__.__name__:
-                count += 1
-        print(count)
+        if len(lineParse) == 0:
+            print("** class name missing **")
+        elif lineParse[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
+        else:
+            for obj in storage.all().values():
+                if lineParse[0] == obj.__class__.__name__:
+                    count += 1
+            print(count)
 
     def default(self, line):
         """Default behavior for cmd module when input is invalid"""
-        
+
         self._precmd(line)
 
     def _precmd(self, line):
@@ -240,7 +246,6 @@ class HBNBCommand(cmd.Cmd):
                         value = attributes[attribute](value)
                     setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
-        
 
 
 if __name__ == '__main__':

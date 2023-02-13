@@ -7,4 +7,3 @@ class State(BaseModel):
     """Class representing state"""
 
     name = ""
-    
