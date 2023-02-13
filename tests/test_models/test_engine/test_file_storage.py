@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """Defines unittests for models/engine/file_storage.py.
 
 Unittest classes:
@@ -372,5 +371,4 @@ class TestFileStorage(unittest.TestCase):
 
 
 if __name__ == '__main__':
->>>>>>> defac125f0a7937e18abd58446b497db952dfc3d
     unittest.main()

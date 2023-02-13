@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """Defines unittests for models/base_model.py.
 
 Unittest classes:
@@ -261,4 +260,3 @@ class TestBaseModel(unittest.TestCase):
     
 if __name__ == '__main__':
     unittest.main()
->>>>>>> defac125f0a7937e18abd58446b497db952dfc3d
