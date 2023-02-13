@@ -143,7 +143,7 @@ class TestFileStorage(unittest.TestCase):
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
             FileStorage.all()
-        msg = "all() takes 1 positional argument but 2 were given"
+        msg = "all() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), msg)
 
     def test_5_all_excess_args(self):
