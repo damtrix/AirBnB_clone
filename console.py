@@ -56,7 +56,7 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, line):
-        """Creating an instance od BaseModel"""
+        """Creating an instance of BaseModel"""
 
         lineParse = parse(line)
         if len(lineParse) == 0:
@@ -69,10 +69,7 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
 
     def do_show(self, line):
-        """
-        Prints the string representation of an
-        instance based on the class name and id
-        """
+        """Prints the string representation of an instance based on the class name and id"""
 
         lineParse = parse(line)
         objAll = storage.all()
