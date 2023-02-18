@@ -69,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
 
     def do_show(self, line):
-        """Prints the string representation of an instance based on the class name and id"""
+        """Representation of an instance based on the class name and id"""
 
         lineParse = parse(line)
         objAll = storage.all()
